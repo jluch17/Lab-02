@@ -52,6 +52,17 @@ int main() {
 // TODO: implement this function from the algorithm provided.
 // This file will not compile until both numbers and N are used.
 void sort1(vector<int>& numbers, int N) {
+    int j = 0;
+    int k = 0;
+    for (int i = 2; i <= N; i++){
+        k = numbers[i];
+        j = i - 1;
+        while((j > 0) && (numbers[j] > k)){
+            numbers[j+1] = numbers[j];
+            --j;
+        }
+        numbers[j+1] = k;
+    }
 } // sort1()
 
 
